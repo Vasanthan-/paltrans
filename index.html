@@ -28,6 +28,33 @@
         <!-- Favicons -->
         <link rel="shortcut icon" href="images/ico/favicon.ico">
 
+        <style>
+            #overlay {
+                position: fixed;
+                display: none;
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background-color: rgba(0, 0, 0, 0.5);
+                z-index: 2;
+                cursor: pointer;
+            }
+
+            #otext {
+                position: absolute;
+                background-color: black;
+                padding: 20px;
+                top: 50%;
+                left: 50%;
+                color: white;
+                transform: translate(-50%, -50%);
+                -ms-transform: translate(-50%, -50%);
+            }
+        </style>
+
         <!-- JavaScripts -->
         <script src="js/jquery-1.10.2.min.js"></script>
         <script src="js/modernizr.js"></script>
@@ -66,7 +93,7 @@
                         <div class="row">
                             <div class="col-md-4 col-sm-4 col-xs-6">
                                 <div class="logo">
-                                    <h1><a href="#" title="Dreri">Paltrans</a></h1>
+                                    <img src="images/logo.png" alt="" style="background-color:black">
                                 </div> <!-- /.logo -->
                             </div> <!-- /.col-md-4 -->
                             <div class="col-md-8 col-sm-8 col-xs-6">
@@ -145,7 +172,56 @@
                                 professionally. In Paltrans Warehouse, we provide a safe and secure shelter for your
                                 cargo.
                             </div>
-                            <div>read more</div>
+                            <div id="overlay" onclick="off()">
+                                <div id="otext">
+                                    <p>
+                                        Since 2015, Paltrans had been operating warehouses.
+                                        </br></br>
+
+                                        As part of an integrated logistics service provider, our warehouse serves as the
+                                        base for all our logistics activities.
+                                        </br></br>
+
+                                        Our experienced and dedicated Warehouse Team will handle your cargo safely and
+                                        professionally. In Paltrans Warehouse, we provide a safe and secure shelter for
+                                        your cargo.
+                                        </br></br>
+
+                                        Our warehousing and distribution services are regularly audited and analyzed to
+                                        ensure that it meets the contemporary business models, and any and all upgrades
+                                        are made to ensure our services continue to help our clients meet their logistic
+                                        requirements efficiently. Our logistics team have years of experience in this
+                                        business and can handle long term and large scale assignments with utter
+                                        professionalism, and our customer service helps the clients to stay in the loop
+                                        throughout the process, whenever they require any assistance. Consult with our
+                                        experts today for your logistics, warehousing and distribution services
+                                        requirements, and allow us to make a positive difference in your business.
+                                        </br></br>
+
+                                        Moreover, our supply chain management experts would design a logistic process
+                                        especially for you to align with your business in an integrated fashion. Our
+                                        warehousing services, includes a wide range of services that includes inventory
+                                        control and management, load building, yard management, static and dynamic
+                                        replenishment, kitting, order processing, vendor performance, cross docking,
+                                        supply chain management, logistic integration, bar coding, quality control,
+                                        labelling, carrier performance, and so on.
+                                        </br></br>
+
+                                    <ul>
+                                        <li>Secure storage for stackable, racked cargo and open area for bulk cargo.
+                                        </li>
+                                        <li>Professional Stuffing/ Unstuffing of Containers for export and import</li>
+                                        <li>Project Cargo Management</li>
+                                        <li>Inventory Management</li>
+                                        <li>Packaging / Crating</li>
+                                        <li>Value-Added Services</li>
+                                        <li>Pick And Pack Services</li>
+                                        <li>Automotive Container packing</li>
+                                    </ul>
+                                    </p>
+                                </div>
+                            </div>
+                            <div><button onclick="on()">read more...</button></div>
                         </div> <!-- /.service-item -->
                     </div> <!-- /.col-md-3 -->
                     <div class="col-md-3 col-sm-6">
@@ -345,46 +421,23 @@
                     <div class="col-md-3 col-sm-6">
                         <div class="portfolio-thumb">
                             <img src="images/portfolio/item1.jpg" alt="Portfolio Item 1">
-                            <div class="overlay">
-                                <div class="inner">
-                                    <h4><a data-rel="lightbox" href="images/portfolio/item1.jpg">Nulla non enim</a></h4>
-                                    <span>Design</span>
-                                </div>
-                            </div> <!-- /.overlay -->
                         </div> <!-- /.portfolio-thumb -->
                     </div> <!-- /.col-md-3 -->
                     <div class="col-md-3 col-sm-6">
                         <div class="portfolio-thumb">
                             <img src="images/portfolio/item2.jpg" alt="Portfolio Item 2">
-                            <div class="overlay">
-                                <div class="inner">
-                                    <h4><a data-rel="lightbox" href="images/portfolio/item2.jpg">Duis nec urna</a></h4>
-                                    <span>Creative</span>
-                                </div>
-                            </div> <!-- /.overlay -->
                         </div> <!-- /.portfolio-thumb -->
                     </div> <!-- /.col-md-3 -->
                     <div class="col-md-3 col-sm-6">
                         <div class="portfolio-thumb">
                             <img src="images/portfolio/item3.jpg" alt="Portfolio Item 3">
-                            <div class="overlay">
-                                <div class="inner">
-                                    <h4><a data-rel="lightbox" href="images/portfolio/item3.jpg">Etiam magna</a></h4>
-                                    <span>Design</span>
-                                </div>
-                            </div> <!-- /.overlay -->
+
                         </div> <!-- /.portfolio-thumb -->
                     </div> <!-- /.col-md-3 -->
                     <div class="col-md-3 col-sm-6">
                         <div class="portfolio-thumb">
                             <img src="images/portfolio/item4.jpg" alt="Portfolio Item 4">
-                            <div class="overlay">
-                                <div class="inner">
-                                    <h4><a data-rel="lightbox" href="images/portfolio/item4.jpg">Vivamus dignissim</a>
-                                    </h4>
-                                    <span>Creative</span>
-                                </div>
-                            </div> <!-- /.overlay -->
+
                         </div> <!-- /.portfolio-thumb -->
                     </div> <!-- /.col-md-3 -->
                 </div> <!-- /.row -->
@@ -392,175 +445,125 @@
                     <div class="col-md-3 col-sm-6">
                         <div class="portfolio-thumb">
                             <img src="images/portfolio/item5.jpg" alt="Portfolio Item 5">
-                            <div class="overlay">
-                                <div class="inner">
-                                    <h4><a data-rel="lightbox" href="images/portfolio/item5.jpg">Fusce semper</a></h4>
-                                    <span>HTML CSS</span>
-                                </div>
-                            </div> <!-- /.overlay -->
+
                         </div> <!-- /.portfolio-thumb -->
                     </div> <!-- /.col-md-3 -->
                     <div class="col-md-3 col-sm-6">
                         <div class="portfolio-thumb">
                             <img src="images/portfolio/item6.jpg" alt="Portfolio Item 6">
-                            <div class="overlay">
-                                <div class="inner">
-                                    <h4><a data-rel="lightbox" href="images/portfolio/item6.jpg">Nunc ultrices</a></h4>
-                                    <span>Mobile</span>
-                                </div>
-                            </div> <!-- /.overlay -->
+
                         </div> <!-- /.portfolio-thumb -->
                     </div> <!-- /.col-md-3 -->
                     <div class="col-md-3 col-sm-6">
                         <div class="portfolio-thumb">
                             <img src="images/portfolio/item7.jpg" alt="Portfolio Item 7">
-                            <div class="overlay">
-                                <div class="inner">
-                                    <h4><a data-rel="lightbox" href="images/portfolio/item7.jpg">Fusce vehicula</a></h4>
-                                    <span>HTML CSS</span>
-                                </div>
-                            </div> <!-- /.overlay -->
+
                         </div> <!-- /.portfolio-thumb -->
                     </div> <!-- /.col-md-3 -->
                     <div class="col-md-3 col-sm-6">
                         <div class="portfolio-thumb">
                             <img src="images/portfolio/item8.jpg" alt="Portfolio Item 8">
-                            <div class="overlay">
-                                <div class="inner">
-                                    <h4><a data-rel="lightbox" href="images/portfolio/item8.jpg">Vivamus elementum</a>
-                                    </h4>
-                                    <span>Mobile</span>
-                                </div>
-                            </div> <!-- /.overlay -->
+
                         </div> <!-- /.portfolio-thumb -->
                     </div> <!-- /.col-md-3 -->
                 </div> <!-- /.row -->
                 <div class="row">
                     <div class="col-md-3 col-sm-6">
                         <div class="portfolio-thumb">
-                            <img src="images/portfolio/item5.jpg" alt="Portfolio Item 5">
-                            <div class="overlay">
-                                <div class="inner">
-                                    <h4><a data-rel="lightbox" href="images/portfolio/item5.jpg">Fusce semper</a></h4>
-                                    <span>HTML CSS</span>
-                                </div>
-                            </div> <!-- /.overlay -->
+                            <img src="images/portfolio/item9.jpg" alt="Portfolio Item 5">
+
                         </div> <!-- /.portfolio-thumb -->
                     </div> <!-- /.col-md-3 -->
                     <div class="col-md-3 col-sm-6">
                         <div class="portfolio-thumb">
-                            <img src="images/portfolio/item6.jpg" alt="Portfolio Item 6">
-                            <div class="overlay">
-                                <div class="inner">
-                                    <h4><a data-rel="lightbox" href="images/portfolio/item6.jpg">Nunc ultrices</a></h4>
-                                    <span>Mobile</span>
-                                </div>
-                            </div> <!-- /.overlay -->
+                            <img src="images/portfolio/item10.jpg" alt="Portfolio Item 6">
+
                         </div> <!-- /.portfolio-thumb -->
                     </div> <!-- /.col-md-3 -->
                     <div class="col-md-3 col-sm-6">
                         <div class="portfolio-thumb">
-                            <img src="images/portfolio/item7.jpg" alt="Portfolio Item 7">
-                            <div class="overlay">
-                                <div class="inner">
-                                    <h4><a data-rel="lightbox" href="images/portfolio/item7.jpg">Fusce vehicula</a></h4>
-                                    <span>HTML CSS</span>
-                                </div>
-                            </div> <!-- /.overlay -->
+                            <img src="images/portfolio/item11.jpg" alt="Portfolio Item 7">
+
                         </div> <!-- /.portfolio-thumb -->
                     </div> <!-- /.col-md-3 -->
                     <div class="col-md-3 col-sm-6">
                         <div class="portfolio-thumb">
-                            <img src="images/portfolio/item8.jpg" alt="Portfolio Item 8">
-                            <div class="overlay">
-                                <div class="inner">
-                                    <h4><a data-rel="lightbox" href="images/portfolio/item8.jpg">Vivamus elementum</a>
-                                    </h4>
-                                    <span>Mobile</span>
-                                </div>
-                            </div> <!-- /.overlay -->
+                            <img src="images/portfolio/item12.jpg" alt="Portfolio Item 8">
+                            
                         </div> <!-- /.portfolio-thumb -->
                     </div> <!-- /.col-md-3 -->
                 </div> <!-- /.row -->
                 <div class="row">
                     <div class="col-md-3 col-sm-6">
                         <div class="portfolio-thumb">
-                            <img src="images/portfolio/item5.jpg" alt="Portfolio Item 5">
-                            <div class="overlay">
-                                <div class="inner">
-                                    <h4><a data-rel="lightbox" href="images/portfolio/item5.jpg">Fusce semper</a></h4>
-                                    <span>HTML CSS</span>
-                                </div>
-                            </div> <!-- /.overlay -->
+                            <img src="images/portfolio/item13.jpg" alt="Portfolio Item 5">
+                            
                         </div> <!-- /.portfolio-thumb -->
                     </div> <!-- /.col-md-3 -->
                     <div class="col-md-3 col-sm-6">
                         <div class="portfolio-thumb">
-                            <img src="images/portfolio/item6.jpg" alt="Portfolio Item 6">
-                            <div class="overlay">
-                                <div class="inner">
-                                    <h4><a data-rel="lightbox" href="images/portfolio/item6.jpg">Nunc ultrices</a></h4>
-                                    <span>Mobile</span>
-                                </div>
-                            </div> <!-- /.overlay -->
+                            <img src="images/portfolio/item14.jpg" alt="Portfolio Item 6">
+                            
                         </div> <!-- /.portfolio-thumb -->
                     </div> <!-- /.col-md-3 -->
                     <div class="col-md-3 col-sm-6">
                         <div class="portfolio-thumb">
-                            <img src="images/portfolio/item7.jpg" alt="Portfolio Item 7">
-                            <div class="overlay">
-                                <div class="inner">
-                                    <h4><a data-rel="lightbox" href="images/portfolio/item7.jpg">Fusce vehicula</a></h4>
-                                    <span>HTML CSS</span>
-                                </div>
-                            </div> <!-- /.overlay -->
+                            <img src="images/portfolio/item15.jpg" alt="Portfolio Item 7">
+                            
                         </div> <!-- /.portfolio-thumb -->
                     </div> <!-- /.col-md-3 -->
                     <div class="col-md-3 col-sm-6">
                         <div class="portfolio-thumb">
-                            <img src="images/portfolio/item8.jpg" alt="Portfolio Item 8">
-                            <div class="overlay">
-                                <div class="inner">
-                                    <h4><a data-rel="lightbox" href="images/portfolio/item8.jpg">Vivamus elementum</a>
-                                    </h4>
-                                    <span>Mobile</span>
-                                </div>
-                            </div> <!-- /.overlay -->
+                            <img src="images/portfolio/item16.jpg" alt="Portfolio Item 8">
+                            
                         </div> <!-- /.portfolio-thumb -->
                     </div> <!-- /.col-md-3 -->
                 </div> <!-- /.row -->
                 <div class="row">
                     <div class="col-md-3 col-sm-6">
                         <div class="portfolio-thumb">
-                            <img src="images/portfolio/item5.jpg" alt="Portfolio Item 5">
-                            <div class="overlay">
-                                <div class="inner">
-                                    <h4><a data-rel="lightbox" href="images/portfolio/item5.jpg">Fusce semper</a></h4>
-                                    <span>HTML CSS</span>
-                                </div>
-                            </div> <!-- /.overlay -->
+                            <img src="images/portfolio/item17.jpg" alt="Portfolio Item 5">
+                            
                         </div> <!-- /.portfolio-thumb -->
                     </div> <!-- /.col-md-3 -->
                     <div class="col-md-3 col-sm-6">
                         <div class="portfolio-thumb">
-                            <img src="images/portfolio/item6.jpg" alt="Portfolio Item 6">
-                            <div class="overlay">
-                                <div class="inner">
-                                    <h4><a data-rel="lightbox" href="images/portfolio/item6.jpg">Nunc ultrices</a></h4>
-                                    <span>Mobile</span>
-                                </div>
-                            </div> <!-- /.overlay -->
+                            <img src="images/portfolio/item18.jpg" alt="Portfolio Item 6">
+                            
                         </div> <!-- /.portfolio-thumb -->
                     </div> <!-- /.col-md-3 -->
                     <div class="col-md-3 col-sm-6">
                         <div class="portfolio-thumb">
-                            <img src="images/portfolio/item7.jpg" alt="Portfolio Item 7">
-                            <div class="overlay">
-                                <div class="inner">
-                                    <h4><a data-rel="lightbox" href="images/portfolio/item7.jpg">Fusce vehicula</a></h4>
-                                    <span>HTML CSS</span>
-                                </div>
-                            </div> <!-- /.overlay -->
+                            <img src="images/portfolio/item19.jpg" alt="Portfolio Item 7">  
+                        </div> <!-- /.portfolio-thumb -->
+                    </div> <!-- /.col-md-3 -->
+                    <div class="col-md-3 col-sm-6">
+                        <div class="portfolio-thumb">
+                            <img src="images/portfolio/item20.jpg" alt="Portfolio Item 7">  
+                        </div> <!-- /.portfolio-thumb -->
+                    </div> <!-- /.col-md-3 -->
+                </div> <!-- /.row -->
+                <div class="row">
+                    <div class="col-md-3 col-sm-6">
+                        <div class="portfolio-thumb">
+                            <img src="images/portfolio/item21.jpg" alt="Portfolio Item 5">
+                            
+                        </div> <!-- /.portfolio-thumb -->
+                    </div> <!-- /.col-md-3 -->
+                    <div class="col-md-3 col-sm-6">
+                        <div class="portfolio-thumb">
+                            <img src="images/portfolio/item22.jpg" alt="Portfolio Item 6">
+                            
+                        </div> <!-- /.portfolio-thumb -->
+                    </div> <!-- /.col-md-3 -->
+                    <div class="col-md-3 col-sm-6">
+                        <div class="portfolio-thumb">
+                            <img src="images/portfolio/item23.jpg" alt="Portfolio Item 7">  
+                        </div> <!-- /.portfolio-thumb -->
+                    </div> <!-- /.col-md-3 -->
+                    <div class="col-md-3 col-sm-6">
+                        <div class="portfolio-thumb">
+                            <img src="images/portfolio/item24.jpg" alt="Portfolio Item 7">  
                         </div> <!-- /.portfolio-thumb -->
                     </div> <!-- /.col-md-3 -->
                 </div> <!-- /.row -->
@@ -614,7 +617,8 @@
                         </div> <!-- /.map-holder -->
                         <div class="contact-info">
                             <p>Call us today for all your sensitive cargo needs. We assure for your Road to Success.</p>
-                            <span><i class="fa fa-home"></i> WEST STAR, 11 Tuas Bay Close, Unit #08-01/06, Singapore 636996.</span>
+                            <span><i class="fa fa-home"></i> WEST STAR, 11 Tuas Bay Close, Unit #08-01/06, Singapore
+                                636996.</span>
                             <span><i class="fa fa-phone"></i>+65 6266 1173 | Accounts & Admin (Call / Fax)</span>
                             <span><i class="fa fa-phone"></i>+65 6266 1172 | Operations Inquiries</span>
                             <span><i class="fa fa-user"></i>Mr. Pandian</span>
@@ -649,6 +653,15 @@
         <script src="js/plugins.js"></script>
         <script src="js/jquery.lightbox.js"></script>
         <script src="js/custom.js"></script>
+        <script>
+            function on() {
+                document.getElementById("overlay").style.display = "block";
+            }
+            function off() {
+                document.getElementById("overlay").style.display = "none";
+            }
+
+        </script>
 
     </body>
 
